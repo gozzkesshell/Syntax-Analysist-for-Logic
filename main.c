@@ -5,7 +5,7 @@
 #define n 100
 
 void Error(int );
-char Getnext(int * );
+char Getnext(int *, int  );
 void Expression(char *, int * );
 
 bool isKonjunkc();
@@ -23,31 +23,50 @@ int main()
     line=(char *)malloc(n*sizeof(char));
     puts("Input ur expression");
     gets(line);
-    len=strlen(line);
+    len=strlen(line, len);
 
 
-
-
+    free(line);
     return 0;
 }
 
-char Getnext(int *pi);
-{ char ch;
-    *pi++;
-if(i==len)
-{
-    printf("Express is correct")
-    exit(EXIT_SUCCESS);
-}
-    ch=getchar();
-    return ch;
-
-}
-
-
-void Expression(char *line,int *pi)
+void Expression()
 {
     char ch;
-    ch=Getnext(pi);
+    ch = Getnext(pi, len);
+    if(isKonjunkc())
+        if()
+}
+
+char Getnext(int *pi, int len )
+{
+    char ch;
+    *pi++;
+        if(*pi == len )
+    {
+        printf("The expression is coorect ");
+        exit(EXIT_SUCCESS);
+    }
+
+    ch=getchar();
+
+    return ch;
+}
+
+void Error(int n)
+{
+    switch(n)
+    case 1: printf("The first symbol error");
+    break;
+    case 2:
+}
+
+bool isKonjunkc(int *pi, int len)
+{
+
+
+
 
 }
+
+
