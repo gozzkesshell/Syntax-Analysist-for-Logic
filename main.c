@@ -5,6 +5,7 @@
 #include <stdbool.h>
 #define n 30
 
+<<<<<<< HEAD
 int now=0;
 void Error(int ); // Arguments of function:
 /*
@@ -20,6 +21,11 @@ void Error(int ); // Arguments of function:
 10 - Wrong Expression
 11 - Incorrect Factor
 */
+=======
+void Error(int );
+char Getnext(int *, int  );
+void Expression(char *, int * );
+>>>>>>> origin/master
 
 void Expression(char *);
 bool isKonjunkc(char *);
@@ -40,6 +46,7 @@ int main()
     line=(char *)malloc(n*sizeof(char));
     puts("Input ur expression");
     gets(line);
+<<<<<<< HEAD
     //len=strlen(line);
     Expression(line);
         return 0;
@@ -152,6 +159,9 @@ bool isSpace(char *line )
     else {  now++;
             return isSpace(line); }
 }
+=======
+    len=strlen(line, len);
+>>>>>>> origin/master
 
 bool isFALSE(char *line)
 {
@@ -164,6 +174,7 @@ bool isFALSE(char *line)
             return false; }
 }
 
+<<<<<<< HEAD
 bool isTRUE(char *line )
 {
     if(line[now]=='T' && line[now+1]=='R' && line[now+2]=='U' && line[now+3]=='E' )
@@ -201,9 +212,44 @@ bool isLetter(char *line)
         }
     else {  Error(8);//Error of letter
             return false; }
+=======
+    free(line);
+    return 0;
 }
 
+void Expression()
+{
+    char ch;
+    ch = Getnext(pi, len);
+    if(isKonjunkc())
+        if()
+}
 
+char Getnext(int *pi, int len )
+{
+    char ch;
+    *pi++;
+        if(*pi == len )
+    {
+        printf("The expression is coorect ");
+        exit(EXIT_SUCCESS);
+    }
+
+    ch=getchar();
+
+    return ch;
+>>>>>>> origin/master
+}
+
+void Error(int n)
+{
+    switch(n)
+    case 1: printf("The first symbol error");
+    break;
+    case 2:
+}
+
+<<<<<<< HEAD
 
 
 void Error(int i)
@@ -232,6 +278,15 @@ void Error(int i)
             break;
         case 11: printf("\nIncorrect Factor");
             break;
+=======
+bool isKonjunkc(int *pi, int len)
+{
+
+
+
+>>>>>>> origin/master
 
     }
 }
+
+
